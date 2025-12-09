@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sistema de Bienestar Universitario – UNSCH</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!-- NAV SUPERIOR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="assets/img/unsch_logo.png" alt="Logo UNSCH" class="topbar-logo" />
+      <div class="topbar-text">
+        <span class="topbar-univ">Universidad Nacional de San Cristóbal de Huamanga</span>
+        <span class="topbar-area">Dirección de Bienestar Universitario</span>
+      </div>
+    </div>
+
+    <nav class="topbar-nav">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#comedor">Comedor Universitario</a>
+      <a href="#departamento-medico">Departamento Médico</a>
+      <a href="#registros">Registros de Beneficiarios</a>
+      <a href="#seguro">Seguro Contra Accidentes</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="nosotros" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Bienestar Universitario – UNSCH</h1>
+      <p>
+        Plataforma web para la gestión de citas, atenciones médicas, derivaciones
+        y reportes del Sistema de Bienestar Universitario.
+      </p>
+      <a href="#departamento-medico" class="hero-btn">Ir al Departamento Médico</a>
+    </div>
+  </section>
+
+  <!-- COMEDOR -->
+  <section id="comedor" class="section">
+    <div class="section-container">
+      <h2>Comedor Universitario</h2>
+      <p>
+        Módulo informativo para la gestión de tickets, turnos y beneficiarios del comedor universitario.
+      </p>
+    </div>
+  </section>
+
+  <!-- DEPARTAMENTO MÉDICO -->
+  <section id="departamento-medico" class="section section-medico">
+    <div class="section-container medico-grid">
+
+      <!-- Imagen -->
+      <div class="medico-image-wrapper">
+        <img src="assets/img/medicos2.jpg" alt="Atención médica UNSCH" class="medico-image" />
+      </div>
+
+      <!-- Login -->
+      <div class="login-card">
+        <div class="login-header">
+          <img src="assets/img/unsch_logo.png" alt="Logo UNSCH" class="login-logo" />
+          <h2>Departamento Médico</h2>
+          <p>Sistema de Bienestar Universitario – UNSCH</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <label for="correo">Correo institucional</label>
+          <input type="email" id="correo" placeholder="ejemplo@unsch.edu.pe" required />
+
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" placeholder="********" required />
+
+          <label for="tipoUsuario">Tipo de usuario</label>
+          <select id="tipoUsuario">
+            <option value="estudiante">Estudiante</option>
+            <option value="personal">Personal de salud</option>
+            <option value="administrador">Administrador</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Ingresar</button>
+
+          <div class="login-links">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <span>|</span>
+            <a href="registro.html">Registrarme</a>
+          </div>
+        </form>
+
+        <div class="login-footer">
+          Proyecto académico basado en casos de uso del Sistema de Bienestar Universitario – UNSCH.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REGISTROS -->
+  <section id="registros" class="section">
+    <div class="section-container">
+      <h2>Registros de Beneficiarios</h2>
+      <p>
+        Consulta de historial médico, reportes y estadísticas.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEGURO -->
+  <section id="seguro" class="section">
+    <div class="section-container">
+      <h2>Seguro Contra Accidentes</h2>
+      <p>
+        Información sobre requisitos, cobertura y procesos de afiliación.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Sistema de Bienestar Universitario – UNSCH · Proyecto académico</p>
+  </footer>
+
+  <script src="assets/js/login.js"></script>
+</body>
+
+</html>

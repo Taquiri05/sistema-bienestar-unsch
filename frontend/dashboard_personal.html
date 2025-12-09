@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Panel del Personal de Salud – UNSCH</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <!-- ======= SIDEBAR MÉDICO ======= -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Personal de Salud</h2>
+    <ul>
+      <li><a href="#" id="btn-dashboard">🏥 Inicio</a></li>
+      <li><a href="#" id="btn-citas">📋 Citas Pendientes</a></li>
+      <li><a href="#" id="btn-historial">📚 Historial Clínico</a></li>
+      <li><a href="index.html">🚪 Cerrar Sesión</a></li>
+    </ul>
+  </aside>
+
+  <!-- ======= CONTENIDO PRINCIPAL ======= -->
+  <main class="main-content">
+
+    <!-- ======================= DASHBOARD ======================= -->
+    <section id="vista-dashboard" class="vista-activa">
+
+      <h1>Bienvenido(a), Profesional de Salud</h1>
+      <p>Resumen general de tus citas del día.</p>
+
+      <div class="cards-container">
+        <div class="card">
+          <h3>Citas Pendientes</h3>
+          <span id="count-pendientes">0</span>
+        </div>
+
+        <div class="card">
+          <h3>Citas Atendidas Hoy</h3>
+          <span id="count-atendidas">0</span>
+        </div>
+
+        <div class="card">
+          <h3>Citas Canceladas</h3>
+          <span id="count-canceladas">0</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================= CITAS PENDIENTES ======================= -->
+    <section id="vista-citas" class="vista-oculta"></section>
+
+    <!-- ======================= HISTORIAL CLÍNICO ======================= -->
+    <section id="vista-historial" class="vista-oculta">
+
+      <h2>Historial Clínico</h2>
+
+      <!-- Buscador moderno -->
+      <div class="buscador-container">
+        <label for="dni-buscar">Buscar estudiante por DNI</label>
+        <input type="text" id="dni-buscar" placeholder="Ingrese DNI del estudiante">
+
+        <button id="btnBuscarHistorial" class="btn-buscar">Buscar</button>
+      </div>
+
+      <!-- Resultado -->
+      <div id="resultado-historial" class="resultado-container"></div>
+
+    </section>
+
+  </main>
+
+  <script src="assets/js/personal.js"></script>
+
+</body>
+
+</html>

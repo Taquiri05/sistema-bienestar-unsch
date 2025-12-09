@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel del Estudiante – Bienestar UNSCH</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!-- ======= SIDEBAR ======= -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Estudiante</h2>
+    <ul>
+      <li><a href="#" id="btn-dashboard">🏠 Inicio</a></li>
+      <li><a href="#" id="btn-reservar">🗓 Reservar Cita</a></li>
+      <li><a href="#" id="btn-mis-citas">📋 Mis Citas</a></li>
+      <li><a href="#" onclick="mostrarModal()">🚪 Cerrar Sesión</a></li>
+
+    </ul>
+  </aside>
+
+  <!-- ======= CONTENIDO PRINCIPAL ======= -->
+  <main class="main-content">
+
+    <!-- BIENVENIDA -->
+    <section id="vista-dashboard" class="vista-activa">
+      <h1>Bienvenido(a) Estudiante</h1>
+      <p>Selecciona una opción del menú para comenzar.</p>
+
+      <div class="cards-container">
+        <div class="card">
+          <h3>Citas Programadas</h3>
+          <span id="count-programadas">0</span>
+        </div>
+
+        <div class="card">
+          <h3>Citas Atendidas</h3>
+          <span id="count-atendidas">0</span>
+        </div>
+
+        <div class="card">
+          <h3>Citas Canceladas</h3>
+          <span id="count-canceladas">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAR CITA -->
+    <section id="vista-reservar" class="vista-oculta">
+      <h1>Reservar Cita</h1>
+
+      <form id="form-reserva" class="form-box">
+        <label>Especialidad</label>
+        <select id="especialidad">
+          <option value="Psicología">Psicología</option>
+          <option value="Odontología">Odontología</option>
+          <option value="Obstetricia">Obstetricia</option>
+          <option value="Medicina General">Medicina General</option>
+          <option value="Enfermería">Enfermería</option>
+        </select>
+
+        <label>Fecha</label>
+        <input type="date" id="fecha" required />
+
+        <label>Hora</label>
+        <input type="time" id="hora" required />
+
+        <button type="submit" class="btn-primary">Reservar</button>
+      </form>
+    </section>
+
+    <!-- MIS CITAS -->
+    <section id="vista-mis-citas" class="vista-oculta">
+      <h1>Mis Citas</h1>
+
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Especialidad</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabla-citas"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="assets/js/estudiante.js"></script>
+
+  <!-- ===== MODAL DE CERRAR SESIÓN ===== -->
+  <div id="modalLogout" class="modal-bg">
+    <div class="modal-box">
+      <h3>¿Seguro que deseas cerrar sesión?</h3>
+
+      <div class="modal-btns">
+        <button class="btn-cancelar" onclick="cerrarModal()">No</button>
+        <button class="btn-salir" onclick="logout()">Sí</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FUNCIONES DEL MODAL ===== -->
+  <script>
+    function mostrarModal() {
+      document.getElementById("modalLogout").style.display = "flex";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modalLogout").style.display = "none";
+    }
+
+    function logout() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+
+</html>
