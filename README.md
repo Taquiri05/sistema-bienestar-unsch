@@ -100,5 +100,5 @@ El proyecto **Sistema de Bienestar Universitario – UNSCH** fue desarrollado co
 ---
 
 ## 📌 Resumen
-Proyecto académico completo basado en **Flask + MySQL + Frontend Moderno**, diseñado para el Sistema de Bienestar Universitario – UNSCH.
+Proyecto académico completo basado en **Flask + MySQL + Frontend **, diseñado para el Sistema de Bienestar Universitario – UNSCH.
 
